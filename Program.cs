@@ -7,9 +7,18 @@ namespace Stopwatch
     {
         static void Main(string[] args)
         {
-            Start(10);
+            Menu();
         }
+        static void Menu()
+        {
+            Console.WriteLine("S - Segundos / M - Minutos / 0 - Sair");
+            Console.WriteLine("Quanto deseja contar?");
 
+            string data = Console.ReadLine().ToLower();
+            char type = char.Parse(data.Substring(data.Length - 1, 1));
+            int time = int.Parse(data.Substring(0, data.Length - 1));
+
+        }
         static void Start(int time)
         {
             int currentTime = 0;
